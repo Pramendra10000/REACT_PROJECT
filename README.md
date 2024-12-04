@@ -25,9 +25,11 @@ git init
 
 git remote add origin https://github.com/Pramendra10000/REACT_PROJECT.git
 
-git push -u origin Product-React-Project
-// for push the code in repo if do any changes 
-git push origin Product-React-Project
+git push -u origin Product-React-Project                                     
+///////////////////////////////////////////////////////////////////////////////////////////// for push the code in repo if do any changes 
+  
+  
+  git push origin Product-React-Project
 
 
 
