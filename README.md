@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 THE commands whic i have used in my demo project .
 
+npx create-react-app my-app
 
 npm i react-toastify@9.0.3
 
