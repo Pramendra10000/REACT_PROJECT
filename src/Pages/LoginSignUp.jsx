@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LoginSignUp.css';  // External CSS file
+import './CSS/LoginSignUp.css';  // External CSS file
 
 const LoginSignUp = () => {
   const [isSignup, setIsSignup] = useState(false);  // Toggle between Login and Signup

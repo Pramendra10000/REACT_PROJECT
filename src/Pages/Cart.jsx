@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Cart.css';
+import './CSS/Cart.css';
 
 const Cart = () => {
   // Sample cart data

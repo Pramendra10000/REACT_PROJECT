@@ -1,0 +1,90 @@
+/* Overall container for ProductList */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set to 3 columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual product item */
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%; /* Full width of the card */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.no-image {
+    width: 100%; /* Full width of the card */
+    height: 150px; /* Fixed height to match product-image */
+    background-color: #f0f0f0; /* Placeholder background */
+    display: flex; /* Center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 14px; /* Font size for placeholder text */
+    color: #888; /* Color for placeholder text */
+    border-radius: 8px; /* Rounded corners to match product image */
+    border: 1px solid #ccc; /* Border for placeholder box */
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-price,
+.product-stock,
+.product-category,
+.product-brand,
+.product-ratings,
+.product-sku,
+.product-discount {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.product-price {
+    color: #ff4141; /* Price color */
+}
+
+.view-details-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #ff4141; /* Button color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline */
+    margin-top: auto; /* Push button to bottom of card */
+}
+
+.view-details-link:hover {
+    background-color: #e13d3d; /* Button hover color */
+}
