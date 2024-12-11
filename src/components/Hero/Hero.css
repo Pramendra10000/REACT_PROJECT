@@ -1,0 +1,118 @@
+.hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 50px;
+    max-width: 600px;
+  }
+  
+  .hero-left h2 {
+    color: #090909;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .hero-hand-icon img {
+    width: 80px;
+  }
+  
+  .hero-left p {
+    font-size: 20px;
+    color: #090909;
+    margin: 5px 0;
+  }
+  
+  .hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+    width: 280px;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color: #ff4141;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-latest-btn:hover {
+    background-color: #e13d3d;
+  }
+  
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image {
+    max-width: 60%;  /* Limits the maximum width to 60% of its parent */
+    height: auto;    /* Keeps the height proportional to the width */
+    object-fit: contain;  /* Ensures the image scales without distorting */
+    margin-top: 20px;  /* Optional: adds some spacing at the top */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-left {
+      padding-left: 20px;
+      text-align: center;
+    }
+  
+    .hero-left h2 {
+      font-size: 36px;
+    }
+  
+    .hero-hand-icon img {
+      width: 60px;
+    }
+  
+    .hero-latest-btn {
+      width: 250px;
+      font-size: 16px;
+    }
+  
+    .hero-image {
+        max-width: 50%;  /* Reduce to 50% width on smaller screens */
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-left h2 {
+      font-size: 28px;
+    }
+  
+    .hero-latest-btn {
+      width: 220px;
+      font-size: 14px;
+    }
+  
+    .hero-image {
+        max-width: 40%;  /* Further reduce to 40% width on very small screens */
+      }
+  }
+  

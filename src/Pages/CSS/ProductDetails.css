@@ -1,0 +1,74 @@
+/* ProductDetails.css */
+.product-details-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-details-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px; /* Add padding around the card */
+  width: 100%; /* Full width */
+  max-width: 800px; /* Optional: set a max width for better layout */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-details-image {
+  width: 100%; /* Ensure image takes full width of its container */
+  height: auto;
+}
+
+.product-details-title {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.product-details-description,
+.product-details-price,
+.product-details-stock,
+.product-details-category,
+.product-details-brand,
+.product-details-ratings,
+.product-details-sku,
+.product-details-discount {
+  margin: 5px 0;
+}
+
+/* Styles for button container */
+.button-container {
+  display: flex; /* Use flexbox to align buttons side by side */
+  justify-content: space-between; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+}
+
+/* Button styles */
+.buy-now-button,
+.add-to-cart-button {
+  padding: 15px; /* Increased padding for larger buttons */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Larger font size for better readability */
+}
+
+.buy-now-button {
+  background-color: #28a745; /* Green background for Buy Now */
+  color: white; /* White text */
+  width: 48%;
+}
+
+.add-to-cart-button {
+  background-color: #007bff; /* Blue background for Add to Cart */
+  color: white; /* White text */
+  width: 48%;
+}
+
+/* Button hover effects */
+.buy-now-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
