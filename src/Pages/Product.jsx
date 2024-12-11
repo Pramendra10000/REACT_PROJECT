@@ -33,13 +33,13 @@ const Product = () => {
             )}
             <div className="product-details">
               <h2 className="product-title">{product.name}</h2>
-              <p className="product-description">{product.description}</p>
+              {/* <p className="product-description">{product.description}</p> */}
               <p className="product-price">${product.price}</p>
-              <p className="product-stock">Stock: {product.stockQuantity}</p>
-              <p className="product-category">Category: {product.category}</p>
-              <p className="product-brand">Brand: {product.brand}</p>
+              {/* <p className="product-stock">Stock: {product.stockQuantity}</p>
+              <p className="product-category">Category: {product.category}</p> */}
+              {/* <p className="product-brand">Brand: {product.brand}</p> */}
               <p className="product-ratings">Ratings: {product.ratings}</p>
-              <p className="product-sku">SKU: {product.sku}</p>
+              {/* <p className="product-sku">SKU: {product.sku}</p> */}
               <p className="product-discount">Discount: {product.discount}%</p>
               <Link to={`/product/${product.id}`} className="view-details-link">
                 View Details

@@ -1,0 +1,97 @@
+/* CheckOut.css */
+.checkout-page {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cart-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-details h3 {
+  margin-bottom: 15px;
+}
+
+.cart-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-details li {
+  margin-bottom: 10px;
+}
+
+.cart-details p.total {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.payment-methods {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods h3 {
+  margin-bottom: 15px;
+}
+
+.payment-methods div {
+  margin-bottom: 15px;
+}
+
+.payment-methods input[type='radio'] {
+  margin-right: 10px;
+}
+
+.payment-methods label {
+  font-size: larger; /* Slightly larger font for labels */
+}
+
+.payment-methods .upi-details,
+.payment-methods .card-details,
+.payment-methods .net-banking-details {
+   margin-top:15px; 
+}
+
+.payment-methods .upi-details input,
+.payment-methods .card-details input,
+.payment-methods .net-banking-details select {
+   width:100%; 
+   padding:10px; 
+   margin-top:8px; 
+   border-radius:5px; 
+   border:1px solid #ccc; 
+   font-size:1em; 
+}
+
+.checkout-page button {
+   display:block; 
+   width:100%; 
+   padding:12px; 
+   background-color:#4CAF50; 
+   color:white; 
+   border:none; 
+   font-size:1.2em; 
+   border-radius:5px; 
+   cursor:pointer; 
+   transition:.3s; 
+}
+
+.checkout-page button:hover {
+   background-color:#45a049; 
+}

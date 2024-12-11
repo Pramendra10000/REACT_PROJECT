@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate from react-router-dom
 import './CSS/Cart.css';
 
 const Cart = () => {
-  // Sample cart data
-  const initialCart = [
-    { id: 1, name: 'Product 1', price: 20, quantity: 2 },
-    { id: 2, name: 'Product 2', price: 35, quantity: 1 },
-    { id: 3, name: 'Product 3', price: 50, quantity: 3 }
-  ];
-
   // State for cart items
-  const [cartItems, setCartItems] = useState(initialCart);
+  const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();  // Initialize the navigate function
+
+  useEffect(() => {
+    // Load cart items from local storage on component mount
+    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    setCartItems(storedCart);
+  }, []);
 
   // Handle changing quantity
   const handleQuantityChange = (id, quantity) => {
@@ -18,12 +19,14 @@ const Cart = () => {
       item.id === id ? { ...item, quantity } : item
     );
     setCartItems(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Update local storage
   };
 
   // Handle removing an item
   const handleRemoveItem = (id) => {
     const updatedCart = cartItems.filter(item => item.id !== id);
     setCartItems(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Update local storage
   };
 
   // Calculate the subtotal
@@ -44,6 +47,11 @@ const Cart = () => {
   // Calculate the total price
   const calculateTotal = () => {
     return calculateSubtotal() + calculateTaxes() + calculateShipping();
+  };
+
+  const handleCheckout = () => {
+    // Pass the cart data as state to the Checkout page
+    navigate('/checkout', { state: { cartItems } });
   };
 
   return (
@@ -102,7 +110,7 @@ const Cart = () => {
 
       {/* Checkout Button */}
       <div className="checkout">
-        <button className="checkout-button">Proceed to Checkout</button>
+        <button className="checkout-button" onClick={handleCheckout}>Proceed to Checkout</button>
       </div>
     </div>
   );
