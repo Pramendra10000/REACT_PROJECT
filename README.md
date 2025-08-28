@@ -74,5 +74,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ================================================================================================ -->
 
 
+git clone https://github.com/ZainRk/portfolio-starter
+
+cd portfolio-starter
+
+npm install -g yarn
+
+yarn -v
+
+yarn
+
+yarn start
+
+Local: http://localhost:3000 On Your Network: http://192.168.0.101:3000
+
+rafc shortcut for creating the basic Structure of .jsx file.
+
 <!-- 
 ================================================================================================ -->
