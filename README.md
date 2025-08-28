@@ -92,14 +92,44 @@ rafc shortcut for creating the basic Structure of .jsx file.
 
 <----------------------------------------------------------------------->
 
+🔹 Step 1: Initialize Git in your project
 
-<!-- For adding all changes file in git stages -->
+
+<----------Open VS Code terminal inside your React project folder and run:-->
+git init
+
+🔹 Step 2: Add remote GitHub repo
+
+<-- Copy your GitHub repo URL (e.g., https://github.com/username/repo-name.git) and add it: -->
+git remote add origin  https://github.com/Pramendra10000/REACT_PROJECT.git
+
+
+<-- If remote already exists, replace it: Run this to reset the remote to your repo: -->
+git remote set-url origin https://github.com/Pramendra10000/REACT_PROJECT.git
+
+Check it:
+git remote -v
+
+It should show:
+origin  https://github.com/Pramendra10000/REACT_PROJECT.git (fetch)
+origin  https://github.com/Pramendra10000/REACT_PROJECT.git (push)
+
+🔹 Step 3: Create & switch to a new branch
+
+<---------- For Create & switch to new branch -->
+git checkout -b Pramendra-Portfolio
+
+🔹 Step 4: Add & Commit your project files
+
+<---------- For adding all changes file in git stages -->
 git add .
 
-<!-- For doing all commit and make -m "commit massage" . -->
+<--------- For doing all commit and make -m "commit massage" . -->
 git commit -m "comments added "
 
-<!-- For git push last step  -->
+🔹 Step 5: Push only this branch to GitHub
+
+<--------- For git push last step  -->
  git push -u origin Pramendra-Portfolio
 
 
