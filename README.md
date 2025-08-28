@@ -70,8 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-<!-- 
-================================================================================================ -->
+<===========================================================================================>
 
 
 git clone https://github.com/ZainRk/portfolio-starter
@@ -91,7 +90,7 @@ Local: http://localhost:3000 On Your Network: http://192.168.0.101:3000
 rafc shortcut for creating the basic Structure of .jsx file.
 
 
-<!--------------------------------------------------------------------- -->
+<----------------------------------------------------------------------->
 
 
 <!-- For adding all changes file in git stages -->
@@ -107,4 +106,4 @@ git commit -m "comments added "
 
 
 
-<!-- ============================================================================================ -->
+<-- ============================================================================================ -->
