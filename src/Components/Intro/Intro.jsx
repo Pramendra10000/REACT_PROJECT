@@ -18,7 +18,7 @@ const Intro = () => {
     <div className='intro'>
        <div className="i-left">
            <div className="i-name">
-            <span>Hy! I Am </span>
+            <span className='firstchild' >Hy! I Am </span>
             <span>Pramendra Singh</span>
             <span>Full stack Developer Having 3+ Experience 
                 In Insurence Domain, With Good Skills In Java|Spring MVC|Spring Boot|Servlet|Sql Server|Azure|Github|Bootstrap|React.js 
