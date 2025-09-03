@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Gumela";
+  src: url("../public/fonts/Gumela\ Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Gumela", sans-serif;
+}
