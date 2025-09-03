@@ -69,9 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
 <===========================================================================================>
-
 
 git clone https://github.com/ZainRk/portfolio-starter
 
@@ -89,11 +87,9 @@ Local: http://localhost:3000 On Your Network: http://192.168.0.101:3000
 
 rafc shortcut for creating the basic Structure of .jsx file.
 
-
 <----------------------------------------------------------------------->
 
 🔹 Step 1: Initialize Git in your project
-
 
 <----------Open VS Code terminal inside your React project folder and run:-->
 git init
@@ -101,8 +97,7 @@ git init
 🔹 Step 2: Add remote GitHub repo
 
 <-- Copy your GitHub repo URL (e.g., https://github.com/username/repo-name.git) and add it: -->
-git remote add origin  https://github.com/Pramendra10000/REACT_PROJECT.git
-
+git remote add origin https://github.com/Pramendra10000/REACT_PROJECT.git
 
 <-- If remote already exists, replace it: Run this to reset the remote to your repo: -->
 git remote set-url origin https://github.com/Pramendra10000/REACT_PROJECT.git
@@ -111,8 +106,8 @@ Check it:
 git remote -v
 
 It should show:
-origin  https://github.com/Pramendra10000/REACT_PROJECT.git (fetch)
-origin  https://github.com/Pramendra10000/REACT_PROJECT.git (push)
+origin https://github.com/Pramendra10000/REACT_PROJECT.git (fetch)
+origin https://github.com/Pramendra10000/REACT_PROJECT.git (push)
 
 🔹 Step 3: Create & switch to a new branch
 
@@ -129,11 +124,18 @@ git commit -m "comments added "
 
 🔹 Step 5: Push only this branch to GitHub
 
-<--------- For git push last step  -->
- git push -u origin Pramendra-Portfolio
+<--------- For git push last step -->
+git push -u origin Pramendra-Portfolio
 
+🔹 Step 6: Push only this branch to GitHub
 
+<--------- For git 3000003push last step -->
 
+# save code changes in VS Code
 
+git add .
+git commit -m "Fix navbar style"
+git push origin Pramendra-Portfolio
+yarn deploy
 
 <-- ============================================================================================ -->

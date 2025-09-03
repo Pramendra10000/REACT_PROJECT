@@ -1,0 +1,52 @@
+.works {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  height: 90vh;
+  margin-top: 4rem;
+}
+/* 
+right side */
+
+.w-right {
+  position: absolute;
+}
+
+.w-mainCircle {
+  left: 40rem;
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  box-shadow: var(--smboxShadow);
+  top: 2rem;
+  background: white;
+}
+
+.w-mainCircle > * {
+  position: absolute;
+}
+
+.w-mainCircle > :nth-child(1) {
+  top: -3rem;
+  left: 6rem;
+}
+
+.w-mainCircle > :nth-child(2) {
+  top: -3rem;
+  left: 5rem;
+}
+
+.w-mainCircle > :nth-child(3) {
+  top: 6rem;
+  left: 5rem;
+}
+
+.w-mainCircle > :nth-child(4) {
+  top: 15rem;
+  left: 5rem;
+}
+
+.w-mainCircle > :nth-child(5) {
+  top: -3rem;
+  left: 6rem;
+}
