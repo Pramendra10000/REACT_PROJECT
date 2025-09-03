@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/REACT_PROJECT/static/css/main.7c8661ae.css",
-    "main.js": "/REACT_PROJECT/static/js/main.95e27417.js",
+    "main.css": "/REACT_PROJECT/static/css/main.a2ea3d76.css",
+    "main.js": "/REACT_PROJECT/static/js/main.91a40f27.js",
     "static/media/boy.png": "/REACT_PROJECT/static/media/boy.5ca4b670a32b71681d2c.png",
     "static/media/glassesimoji.png": "/REACT_PROJECT/static/media/glassesimoji.a08bdab12e8eb56a6874.png",
     "static/media/resume.pdf": "/REACT_PROJECT/static/media/resume.62754d52a6d3384ef32a.pdf",
@@ -12,11 +12,11 @@
     "static/media/Vector2.png": "/REACT_PROJECT/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "static/media/glasses.png": "/REACT_PROJECT/static/media/glasses.71d7c1b0ff0b870a9d7d.png",
     "index.html": "/REACT_PROJECT/index.html",
-    "main.7c8661ae.css.map": "/REACT_PROJECT/static/css/main.7c8661ae.css.map",
-    "main.95e27417.js.map": "/REACT_PROJECT/static/js/main.95e27417.js.map"
+    "main.a2ea3d76.css.map": "/REACT_PROJECT/static/css/main.a2ea3d76.css.map",
+    "main.91a40f27.js.map": "/REACT_PROJECT/static/js/main.91a40f27.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c8661ae.css",
-    "static/js/main.95e27417.js"
+    "static/css/main.a2ea3d76.css",
+    "static/js/main.91a40f27.js"
   ]
 }
