@@ -28,7 +28,7 @@ const Work = () => {
           <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
         </span>
 
-        <button className="button s-button">Download CV</button>
+        <button className="button s-button">Hire Me</button>
 
         <div className="blur s-blurl" style={{ background: "#ABF1FF94" }}></div>
       </div>

@@ -134,8 +134,8 @@ git push -u origin Pramendra-Portfolio
 # save code changes in VS Code
 
 git add .
-git commit -m "Fix navbar style"
-git push origin Pramendra-Portfolio
+git commit -m "Fix Work style"
+git push origin -u Pramendra-Portfolio
 yarn deploy
 
 <-- ============================================================================================ -->

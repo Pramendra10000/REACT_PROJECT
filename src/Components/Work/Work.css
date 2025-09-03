@@ -27,26 +27,26 @@ right side */
 }
 
 .w-mainCircle > :nth-child(1) {
-  top: -3rem;
+  top: -2rem;
   left: 6rem;
 }
 
 .w-mainCircle > :nth-child(2) {
-  top: -3rem;
-  left: 5rem;
+  top: 7rem;
+  left: -2rem;
 }
 
 .w-mainCircle > :nth-child(3) {
   top: 6rem;
-  left: 5rem;
+  left: 7rem;
 }
 
 .w-mainCircle > :nth-child(4) {
-  top: 15rem;
-  left: 5rem;
+  top: 6rem;
+  left: 15rem;
 }
 
 .w-mainCircle > :nth-child(5) {
-  top: -3rem;
-  left: 6rem;
+  top: 14rem;
+  left: 7rem;
 }
