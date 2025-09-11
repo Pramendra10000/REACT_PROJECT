@@ -43,7 +43,8 @@
   box-shadow: var(--boxShadow);
 }
 
-
-.achievement span:nth-of-type(2){
-color: var(--orange);
+.achievement span:nth-of-type(2) {
+  color: var(--orange);
 }
+
+
