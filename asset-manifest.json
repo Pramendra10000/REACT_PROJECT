@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/REACT_PROJECT/static/css/main.a842f836.css",
-    "main.js": "/REACT_PROJECT/static/js/main.2bd561ee.js",
+    "main.css": "/REACT_PROJECT/static/css/main.78637199.css",
+    "main.js": "/REACT_PROJECT/static/js/main.c008d08e.js",
+    "static/media/ecommerce.png": "/REACT_PROJECT/static/media/ecommerce.522da76635d52117102b.png",
+    "static/media/sidebar.png": "/REACT_PROJECT/static/media/sidebar.b2225070b8adae68d063.png",
+    "static/media/musicapp.png": "/REACT_PROJECT/static/media/musicapp.f1c301f91904ef5f9249.png",
     "static/media/boy.png": "/REACT_PROJECT/static/media/boy.5ca4b670a32b71681d2c.png",
     "static/media/glassesimoji.png": "/REACT_PROJECT/static/media/glassesimoji.a08bdab12e8eb56a6874.png",
     "static/media/resume.pdf": "/REACT_PROJECT/static/media/resume.62754d52a6d3384ef32a.pdf",
+    "static/media/hoc.png": "/REACT_PROJECT/static/media/hoc.e6af51fc04c57ae67096.png",
     "static/media/thumbup.png": "/REACT_PROJECT/static/media/thumbup.e06790ba656f0397cbe5.png",
     "static/media/humble.png": "/REACT_PROJECT/static/media/humble.c8b32b53675e68978981.png",
     "static/media/heartemoji.png": "/REACT_PROJECT/static/media/heartemoji.26b1b6ed5e0e44083b28.png",
@@ -12,11 +16,11 @@
     "static/media/Vector2.png": "/REACT_PROJECT/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "static/media/glasses.png": "/REACT_PROJECT/static/media/glasses.71d7c1b0ff0b870a9d7d.png",
     "index.html": "/REACT_PROJECT/index.html",
-    "main.a842f836.css.map": "/REACT_PROJECT/static/css/main.a842f836.css.map",
-    "main.2bd561ee.js.map": "/REACT_PROJECT/static/js/main.2bd561ee.js.map"
+    "main.78637199.css.map": "/REACT_PROJECT/static/css/main.78637199.css.map",
+    "main.c008d08e.js.map": "/REACT_PROJECT/static/js/main.c008d08e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a842f836.css",
-    "static/js/main.2bd561ee.js"
+    "static/css/main.78637199.css",
+    "static/js/main.c008d08e.js"
   ]
 }
