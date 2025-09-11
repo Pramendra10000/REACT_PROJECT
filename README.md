@@ -139,3 +139,6 @@ git push origin -u Pramendra-Portfolio
 yarn deploy
 
 <-- ============================================================================================ -->
+
+yarn add gh-pages -D
+yarn deploy
