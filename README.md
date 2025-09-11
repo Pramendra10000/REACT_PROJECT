@@ -133,12 +133,13 @@ git push -u origin Pramendra-Portfolio
 
 # save code changes in VS Code
 
+git switch Pramendra-Portfolio
 git add .
-git commit -m "Fix Work style"
+git commit -m "Added something on readme"
 git push origin -u Pramendra-Portfolio
-yarn deploy
+
+> > > > > git switch Pramendra-Portfolio
+> > > > > yarn add gh-pages -D
+> > > > > yarn deploy
 
 <-- ============================================================================================ -->
-
-yarn add gh-pages -D
-yarn deploy
