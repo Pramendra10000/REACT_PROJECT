@@ -1,6 +1,9 @@
 import React from 'react'
 import './FlotingDiv.css'
 
+import { themeContext } from "../../Context.js";
+import { useContext } from "react";
+
 const FlotingDiv = ({image ,txt1 ,txt2}) => {
   return (
     <div>
