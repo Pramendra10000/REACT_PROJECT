@@ -5,14 +5,20 @@ import glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Card from "../Card/Card";
 import Resume from "./resume.pdf";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
+import { motion } from "framer-motion";
 
 const Services = () => {
+   const transition = { duration: 2, type: "spring" };
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div>
-      <div className="services">
+      <div className="services" id="Services">
         {/* left side */}
         <div className="awesome">
-          <span>My Awesome</span>
+          <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
           <span>Services</span>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit
@@ -32,13 +38,17 @@ const Services = () => {
         {/* Right side  */}
         <div className="cards">
           {/* First cards */}
-          <div style={{ left: "12rem" }}>
+          <motion.div
+          whileInView={{ left: "12rem" }}
+          initial={{ left: "25rem" }}
+          transition={transition}
+          style={{ left: "12rem" }}>
             <Card
               emoji={HeartEmoji}
               heading={"Design"}
               details={"Figma, Sketch, Photoshop, Adobe, Adobe xd"}
             />
-          </div>
+          </motion.div>
 
           {/* Second cards */}
 
@@ -61,10 +71,10 @@ const Services = () => {
             />
           </div>
         </div>
-         <div
-            className="blur s-blur2"
-            style={{ background: "var(--purple)" }}
-          ></div>
+        <div
+          className="blur s-blur2"
+          style={{ background: "var(--purple)" }}
+        ></div>
       </div>
     </div>
   );

@@ -100,3 +100,9 @@
   left: 56%;
   filter: blur(72px);
 }
+
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+  }
+}

@@ -143,3 +143,9 @@ git push origin -u Pramendra-Portfolio
 > > > > > yarn deploy
 
 <-- ============================================================================================ -->
+
+<-- ==================== what i have added ======================== -->
+yarn add framer-motion
+
+yarn add react-scroll
+

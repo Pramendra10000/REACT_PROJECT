@@ -3,7 +3,7 @@ import "./Experience.css";
 
 export const Experience = () => {
   return (
-    <div className="experience">
+    <div className="experience" id="Experience">
       <div className="achievement">
         <div className="circle">3+</div>
         <span>years</span>
@@ -18,7 +18,7 @@ export const Experience = () => {
       <div className="achievement">
         <div className="circle">3+</div>
         <span>companies</span>
-          <span>Works</span>
+        <span>Works</span>
       </div>
     </div>
   );
