@@ -88,3 +88,31 @@ right side */
   left: 50rem;
   top: 8rem;
 }
+
+
+@media screen and (max-width: 480px) {
+.works{
+  flex-direction: column;
+  height: 44rem;
+  padding: 0;
+  gap: 2rem;
+}
+.w-right{
+  display: flex;
+  align-items: flex-start;
+  transform: scale(0.7);
+  justify-content: start;
+  padding-left: 0px;
+ height: 200rem;
+ left: 0rem;
+
+}
+
+.w-mainCircle{
+  position: static;
+}
+
+.w-backCircle{
+left: 8rem!important;
+}
+}
