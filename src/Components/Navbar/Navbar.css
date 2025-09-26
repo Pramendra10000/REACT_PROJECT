@@ -36,6 +36,12 @@
   color: var(--orange);
 }
 
+#navlink:hover
+{
+    cursor: pointer;
+  color: var(--orange);
+}
+
 .n-button {
   flex: 2;
 }

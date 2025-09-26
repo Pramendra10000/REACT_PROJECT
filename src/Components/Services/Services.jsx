@@ -66,7 +66,7 @@ const Services = () => {
               emoji={Humble}
               heading={"JAVA Full Stack"}
               details={
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti repellendus voluptatum possimus."
+                "Experienced in developing scalable web applications with Spring Boot, React, SOAP services, Hibernate, Bootstrap, and SQL/Oracle databases."
               }
             />
           </div>

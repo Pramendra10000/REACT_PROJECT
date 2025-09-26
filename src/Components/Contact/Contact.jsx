@@ -32,7 +32,7 @@ const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div className="contact-form">
+    <div className="contact-form contact">
       <div className="w-left">
         <div className="awesome">
           <span style={{ color: darkMode ? "white" : "" }}>Get In Touch</span>
