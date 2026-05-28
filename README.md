@@ -149,3 +149,6 @@ yarn add framer-motion
 
 yarn add react-scroll
 
+<-- =================================== Adding multiple pages for study now 28-05-2026 ================================================ -->
+
+
