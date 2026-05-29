@@ -1,0 +1,43 @@
+.studytime-ribbon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border: 4px solid var(--orange);
+    border-radius: 12px;
+    padding: 0 20px;
+    background: linear-gradient(90deg, #ffffff, #ffebc0);
+    box-shadow: 0 0 43px rgb(183 182 75 / 60%);
+}
+
+.studytime-left h3 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    color: #fca61f;
+    text-shadow: 1px 1px 4px rgb(252 166 31 / 90%);
+}
+
+.studytime-right {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    color: #ff9f09;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgb(255 182 66);
+}
+
+.lang-btn:hover {
+  background: #ff9f09;
+  color: #fff;
+ box-shadow: 0 0 12px rgb(255 182 66);
+}

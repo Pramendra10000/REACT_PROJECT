@@ -1,0 +1,274 @@
+/* Fonts & variables can stay global in App.css */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap');
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --card: #16161f;
+  --border: #2a2a3a;
+  --accent: #f0c040;
+  --accent2: #40c8f0;
+  --green: #4af0a0;
+  --text: #e8e8f0;
+  --muted: #7070a0;
+  --tag-bg: #1e1e30;
+}
+
+/* ✅ Scoped wrapper */
+.java-page {
+  background: #0a0a0f; /* dark background for Java page */
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header */
+.java-page header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.java-page .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.java-page .logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.java-page .logo span { color: var(--accent); }
+
+.java-page .stats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+}
+.java-page .stats strong { color: var(--green); }
+
+/* Search bar + tabs */
+.java-page .search-bar {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.java-page .search-bar input {
+  flex: 1;
+  min-width: 200px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 14px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.java-page .search-bar input:focus { border-color: var(--accent); }
+
+.java-page .tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.java-page .tab {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.3px;
+}
+.java-page .tab:hover { color: var(--text); border-color: var(--accent); }
+.java-page .tab.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+/* Progress bar */
+.java-page .progress-bar-wrap {
+  background: var(--surface);
+  height: 3px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.java-page .progress-bar {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+/* Main content */
+.java-page main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.java-page .section-title {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.java-page .section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Q&A cards */
+.java-page .qa-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.java-page .qa-card:hover { border-color: #3a3a5a; }
+.java-page .qa-card.open { border-color: var(--accent); }
+
+.java-page .qa-question {
+  padding: 16px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.java-page .q-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  background: rgba(240,192,64,0.1);
+  border: 1px solid rgba(240,192,64,0.2);
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.java-page .q-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.java-page .q-arrow {
+  font-size: 16px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+  margin-top: 1px;
+}
+.java-page .qa-card.open .q-arrow { transform: rotate(180deg); color: var(--accent); }
+
+.java-page .qa-answer {
+  display: none;
+  padding: 0 18px 18px 50px;
+  animation: fadeIn 0.2s ease;
+}
+.java-page .qa-card.open .qa-answer { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.java-page .qa-answer p {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #c0c0d8;
+  margin-bottom: 8px;
+}
+
+.java-page .qa-answer code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: #0d0d16;
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 6px;
+  display: block;
+  margin: 10px 0;
+  color: var(--green);
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+
+.java-page .qa-answer ul {
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: #c0c0d8;
+  line-height: 1.8;
+}
+
+/* Utility */
+.java-page .hidden { display: none !important; }
+
+.java-page .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.java-page .tag {
+  display: inline-block;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  color: var(--accent2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 6px;
+}
+
+.back-btn {
+  background: #fff;
+  color: #f98606;              /* orange text */
+  border: 2px solid #f98606;   /* orange border */
+  padding: 0px 10px;
+  border-radius: 6px;
+  font-weight: 700;            /* bold text */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: -4px;
+}
+
+.back-btn:hover {
+  background: #f98606;   /* orange background */
+  color: #fff;           /* white text */
+}

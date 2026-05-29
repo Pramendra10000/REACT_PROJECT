@@ -1,0 +1,201 @@
+// src/Components/StudyTime/qaData.js
+export const data = {
+  "Core Java Basics": [
+    {
+      q: "What is the difference between JDK, JRE, and JVM?",
+      a: `<p><strong>JVM</strong> (Java Virtual Machine) – Runs bytecode; platform-specific.</p>
+          <p><strong>JRE</strong> (Java Runtime Environment) – JVM + libraries to run Java programs.</p>
+          <p><strong>JDK</strong> (Java Development Kit) – JRE + compiler (javac) + dev tools. Use JDK to write & build, JRE to run.</p>`
+    },
+    {
+      q: "What are the 4 pillars of OOP in Java?",
+      a: `<ul>
+            <li>Encapsulation</li>
+            <li>Inheritance</li>
+            <li>Polymorphism</li>
+            <li>Abstraction</li>
+          </ul>`
+    },
+    {
+      q: "What is the difference between == and .equals()?",
+      a: `<p><code>==</code> checks reference equality.</p>
+          <p><code>.equals()</code> checks logical/content equality.</p>`
+    },
+    {
+      q: "What is autoboxing and unboxing?",
+      a: `<p>Autoboxing: primitive → wrapper.</p>
+          <p>Unboxing: wrapper → primitive.</p>`
+    },
+    {
+      q: "What is the difference between String, StringBuilder, and StringBuffer?",
+      a: `<ul>
+            <li>String – Immutable.</li>
+            <li>StringBuilder – Mutable, not thread-safe.</li>
+            <li>StringBuffer – Mutable, thread-safe.</li>
+          </ul>`
+    },
+    {
+      q: "What is a static keyword in Java?",
+      a: `<p><code>static</code> belongs to the class, not instances.</p>`
+    },
+    {
+      q: "What is the difference between abstract class and interface?",
+      a: `<ul>
+            <li>Abstract class: can have state, constructors, concrete methods.</li>
+            <li>Interface: contracts, multiple inheritance.</li>
+          </ul>`
+    },
+    {
+      q: "What is method overloading vs overriding?",
+      a: `<p>Overloading: same name, different params.</p>
+          <p>Overriding: subclass redefines parent method.</p>`
+    }
+  ],
+
+  "Collections & Generics": [
+    {
+      q: "What is the Java Collections Framework?",
+      a: `<p>Unified architecture for storing/manipulating groups of objects.</p>`
+    },
+    {
+      q: "What is the difference between ArrayList and LinkedList?",
+      a: `<p>ArrayList: fast random access, slow mid insert/delete.</p>
+          <p>LinkedList: fast insert/delete, slow random access.</p>`
+    },
+    {
+      q: "What is the difference between HashMap and Hashtable?",
+      a: `<p>HashMap: not synchronized, allows null.</p>
+          <p>Hashtable: synchronized, legacy, no nulls.</p>`
+    },
+    {
+      q: "What is the difference between HashSet, LinkedHashSet, and TreeSet?",
+      a: `<p>HashSet: no order.</p>
+          <p>LinkedHashSet: insertion order.</p>
+          <p>TreeSet: sorted order.</p>`
+    },
+    {
+      q: "What are generics in Java?",
+      a: `<p>Type-safe code without casting.</p>`
+    },
+    {
+      q: "What is the Iterator pattern and how to use it?",
+      a: `<p>Iterator allows sequential access without exposing internals.</p>`
+    }
+  ],
+
+  "Exception Handling": [
+    {
+      q: "What is the difference between checked and unchecked exceptions?",
+      a: `<p>Checked: must be declared/caught.</p>
+          <p>Unchecked: RuntimeException subclasses.</p>`
+    },
+    {
+      q: "What is the difference between throw and throws?",
+      a: `<p><code>throw</code>: actually throws exception.</p>
+          <p><code>throws</code>: declares possible exception.</p>`
+    },
+    {
+      q: "What is finally block and when does it not execute?",
+      a: `<p>Always executes after try/catch except System.exit(), JVM crash, thread killed.</p>`
+    },
+    {
+      q: "What is try-with-resources?",
+      a: `<p>Automatically closes resources implementing AutoCloseable.</p>`
+    }
+  ],
+
+  "Multithreading & Concurrency": [
+    {
+      q: "What are the ways to create a thread in Java?",
+      a: `<p>Extend Thread, implement Runnable, use ExecutorService.</p>`
+    },
+    {
+      q: "What is the difference between synchronized method and synchronized block?",
+      a: `<p>Method: locks whole method.</p>
+          <p>Block: locks specific section.</p>`
+    },
+    {
+      q: "What is volatile keyword?",
+      a: `<p>Ensures variable read/written from main memory.</p>`
+    },
+    {
+      q: "What is deadlock and how to avoid it?",
+      a: `<p>Two threads wait for each other's lock.</p>`
+    },
+    {
+      q: "What is ExecutorService?",
+      a: `<p>Framework for managing thread pools.</p>`
+    }
+  ],
+
+  "Java 8+ Features": [
+    {
+      q: "What are lambda expressions?",
+      a: `<p>Short anonymous functions for functional interfaces.</p>`
+    },
+    {
+      q: "What is the Stream API?",
+      a: `<p>Functional pipeline for collections (filter, map, reduce).</p>`
+    },
+    {
+      q: "What is Optional in Java 8?",
+      a: `<p>Container that may/may not hold value.</p>`
+    },
+    {
+      q: "What are default and static methods in interfaces?",
+      a: `<p>Default: has body, can override.</p>
+          <p>Static: called on interface itself.</p>`
+    },
+    {
+      q: "What is a functional interface?",
+      a: `<p>Interface with exactly one abstract method.</p>`
+    }
+  ],
+
+  "Memory & Garbage Collection": [
+    {
+      q: "What are the memory areas in JVM?",
+      a: `<p>Heap, Stack, Method Area, PC Register, Native Method Stack.</p>`
+    },
+    {
+      q: "What is garbage collection and how does it work?",
+      a: `<p>GC reclaims memory from unreferenced objects.</p>`
+    },
+    {
+      q: "What is the difference between stack and heap memory?",
+      a: `<p>Stack: local vars, fast, auto freed.</p>
+          <p>Heap: objects, managed by GC, shared.</p>`
+    }
+  ],
+
+  "Design Patterns": [
+    {
+      q: "What is Singleton pattern and how to make it thread-safe?",
+      a: `<p>Ensures only one instance exists. Use double-checked locking + volatile.</p>`
+    },
+    {
+      q: "What is Factory pattern?",
+      a: `<p>Creates objects without specifying exact class.</p>`
+    },
+    {
+      q: "What is Builder pattern?",
+      a: `<p>Constructs complex objects step by step.</p>`
+    }
+  ],
+
+  "Spring Boot Essentials": [
+    {
+      q: "What is Spring Boot and why use it?",
+      a: `<p>Simplifies Spring setup with auto-config, embedded servers, opinionated defaults.</p>`
+    },
+    {
+      q: "What are the key Spring Boot annotations?",
+      a: `<p>@SpringBootApplication, @RestController, @RequestMapping, @Autowired, @Service, @Repository, @Component, @Entity.</p>`
+    },
+    {
+      q: "What is dependency injection and IoC?",
+      a: `<p>IoC: framework controls object creation.</p>
+          <p>DI: Spring injects dependencies automatically.</p>`
+    }
+  ]
+};

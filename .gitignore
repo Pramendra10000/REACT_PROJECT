@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# Force LF for all text files
+* text=auto eol=lf
+
+
 # testing
 /coverage
 
