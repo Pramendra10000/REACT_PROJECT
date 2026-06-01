@@ -5,8 +5,15 @@
 /.pnp
 .pnp.js
 
+* text=auto
+*.js text eol=lf
+*.json text eol=lf
+*.lock text eol=lf
+
+
 # Force LF for all text files
 * text=auto eol=lf
+
 
 
 # testing

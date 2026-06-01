@@ -256,19 +256,100 @@
   margin-bottom: 6px;
 }
 
-.back-btn {
-  background: #fff;
-  color: #f98606;              /* orange text */
-  border: 2px solid #f98606;   /* orange border */
-  padding: 0px 10px;
-  border-radius: 6px;
-  font-weight: 700;            /* bold text */
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-top: -4px;
+
+/* ============================ login / sign up model ======================= */
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
 }
 
-.back-btn:hover {
-  background: #f98606;   /* orange background */
-  color: #fff;           /* white text */
+/* Modal box */
+.modal {
+  position: relative;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Close icon top-right */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-close:hover {
+  color: var(--accent);
+}
+
+/* Modal heading */
+.modal h2 {
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+/* Form inside modal */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form input {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+}
+
+/* Switch buttons (Login / Signup) */
+.modal-switch {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/* ---- eye password to show ---- */
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  flex: 1;
+  padding-right: 40px; /* space for eye icon */
+}
+
+.password-field .toggle-eye {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.password-field .toggle-eye:hover {
+  color: var(--accent);
 }

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "./Context";
 import App from "./App";
-import JavaCoding from "./Components/StudyTime/javacoding"; // ✅ your Java page
+import JavaCoding from "./Components/StudyTime/javacoding";
+import AddQuestionAns from "./Components/StudyTime/AddQuestionAns"; // ✅ import
 
 ReactDOM.render(
   <ThemeProvider>
@@ -14,6 +15,9 @@ ReactDOM.render(
 
         {/* Java study page */}
         <Route path="/java" component={JavaCoding} />
+
+        {/* ✅ New route for AddQuestionAns */}
+        <Route path="/add_question_ans" component={AddQuestionAns} />
       </Switch>
     </Router>
   </ThemeProvider>,

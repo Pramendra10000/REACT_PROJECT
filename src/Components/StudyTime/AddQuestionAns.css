@@ -1,0 +1,161 @@
+/* Wrapper follows same theme as java-page */
+.addqa-page {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header same as java-page */
+.addqa-page header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.addqa-page .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.addqa-page .logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.addqa-page .logo span { color: var(--accent); }
+
+.addqa-page .stats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--muted);
+}
+.addqa-page .stats .btn { font-size: 12px; }
+
+/* Q&A entry cards */
+.addqa-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  /* extra top padding so inputs don’t overlap with close button */
+  padding: 45px 15px 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Inputs styled to match theme */
+.addqa-card input,
+.addqa-card textarea {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.addqa-card input:focus,
+.addqa-card textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.addqa-card textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Buttons aligned */
+.addqa-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.addqa-actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* Buttons */
+.addqa-page .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.addqa-page .btn:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.addqa-page .btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.addqa-page .btn-primary:hover {
+  background: #ffd966;
+  border-color: #ffd966;
+}
+
+.addqa-page .btn-danger {
+  background: #f44336;
+  border-color: #f44336;
+  color: #fff;
+}
+
+.addqa-page .btn-danger:hover {
+  background: #e53935;
+}
+
+/* Close button inside entry card */
+.addqa-card .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted, #aaa);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.addqa-card .close-btn:hover {
+  color: var(--accent, #f0c040);
+  background: var(--card);
+}
