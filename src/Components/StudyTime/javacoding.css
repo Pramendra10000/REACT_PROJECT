@@ -353,3 +353,14 @@
 .password-field .toggle-eye:hover {
   color: var(--accent);
 }
+
+
+/* ======== for dropdown ============= */
+
+.q-arrow {
+  transition: transform 0.3s ease;
+}
+
+.q-arrow.rotate {
+  transform: rotate(180deg);
+}

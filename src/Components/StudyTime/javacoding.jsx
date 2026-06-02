@@ -332,7 +332,7 @@ const QACard = ({ q, a }) => {
             <div className="qa-question" onClick={() => setOpen(!open)}>
                 <span className="q-num">Q</span>
                 <span className="q-text">{q}</span>
-                <span className="q-arrow">▾</span>
+                <span className={`q-arrow ${open ? "rotate" : ""}`}>▾</span>
             </div>
             {open && (
                 <div className="qa-answer" dangerouslySetInnerHTML={{ __html: a }} />

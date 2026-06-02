@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  updateDoc,
+  doc,
+  query, getFirestore,
+  where
+} from "firebase/firestore";
 import { app } from "../../firebase";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./AddQuestionAns.css"; // ✅ import CSS
+
+import { data } from "../StudyTime/qaData";
+
+
+
 
 const db = getFirestore(app);
 
@@ -30,6 +44,20 @@ const AddQuestionAns = () => {
     setEntries(newEntries);
   };
 
+  const handleImportJSON = () => {
+    const formatted = Object.entries(data).flatMap(([topic, arr]) =>
+      arr.map(item => ({
+        topic,
+        question: item.q,
+        answer: item.a
+      }))
+    );
+
+    setEntries(formatted);
+
+    toast.success("✅ Data imported successfully!");
+  };
+
   // Submit all entries to Firestore
   const handleSubmit = async () => {
     try {
@@ -51,6 +79,65 @@ const AddQuestionAns = () => {
       toast.error("Error saving questions");
     }
   };
+
+  //For update records.
+
+  const handleUpdate = async () => {
+    try {
+      for (let entry of entries) {
+        if (!entry.topic || !entry.question || !entry.answer) continue;
+
+        const q = query(
+          collection(db, "QuestionAnsMaster"),
+          where("topic", "==", entry.topic.trim()),
+          where("question", "==", entry.question.trim())
+        );
+
+        const snapshot = await getDocs(q);
+
+        snapshot.forEach(async (document) => {
+          await updateDoc(doc(db, "QuestionAnsMaster", document.id), {
+            answer: entry.answer
+          });
+        });
+      }
+
+      toast.success("✅ Updated successfully!");
+    } catch (err) {
+      console.error(err);
+      toast.error("❌ Update failed");
+    }
+  };
+
+
+  //For delete records
+
+  const handleDelete = async () => {
+    try {
+      for (let entry of entries) {
+        if (!entry.topic || !entry.question) continue;
+
+        const q = query(
+          collection(db, "QuestionAnsMaster"),
+          where("topic", "==", entry.topic),
+          where("question", "==", entry.question)
+        );
+
+        const snapshot = await getDocs(q);
+
+        snapshot.forEach(async (document) => {
+          await deleteDoc(doc(db, "QuestionAnsMaster", document.id));
+        });
+      }
+
+      toast.success("✅ Deleted successfully!");
+    } catch (err) {
+      console.error(err);
+      toast.error("❌ Delete failed");
+    }
+  };
+
+
 
   return (
     <div className="addqa-page">
@@ -97,9 +184,28 @@ const AddQuestionAns = () => {
         ))}
 
         <div className="addqa-actions">
+
           <button className="btn" onClick={addEntry}>Add</button>
-          <button className="btn btn-primary" onClick={handleSubmit}>Submit</button>
+
+          <button className="btn" onClick={handleImportJSON}>
+            Import JSON
+          </button>
+
+          <button className="btn btn-primary" onClick={handleSubmit}>
+            Submit
+          </button>
+
+          {/* ✅ NEW BUTTONS */}
+          <button className="btn btn-warning" onClick={handleUpdate}>
+            Update
+          </button>
+
+          <button className="btn btn-danger" onClick={handleDelete}>
+            Delete
+          </button>
+
         </div>
+
       </main>
 
       <ToastContainer position="top-right" autoClose={3000} />
