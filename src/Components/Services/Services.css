@@ -61,32 +61,8 @@
 .card-2{top:12rem;left: -4rem; position: absolute;}
 .card-3{top:19rem;left: 12rem; position: absolute;}
 
-@media screen and (max-width: 480px) {
-.services{
-    margin-top: 0;
-    flex-direction: column;
-    gap: 2rem;
-    height: auto;
-    padding: 0;
-}
-.cards{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.cards>*{
-    position: static !important;
-}
-
-.card-1,.card-2,.card-3{
-    position: static !important;
-    left: 0 !important;
-    top: 0 !important;
-    transform: none !important;
-}
 
 
-}
 
 @media screen and (max-width: 768px) {
 .services{
@@ -125,3 +101,31 @@
 
 
 
+
+
+@media screen and (max-width: 480px) {
+.services{
+    margin-top: 0;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    padding: 0;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cards>*{
+    position: static !important;
+}
+
+.card-1,.card-2,.card-3{
+    position: static !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+}
+
+
+}
