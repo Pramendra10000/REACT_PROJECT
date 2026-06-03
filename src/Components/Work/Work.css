@@ -1,6 +1,8 @@
 .works {
   padding: 0 3rem 0 3rem;
   display: flex;
+  align-items: center;
+  gap: 2rem;
   height: 90vh;
   margin-top: 4rem;
 }
@@ -8,11 +10,11 @@
 right side */
 
 .w-right {
-  position: absolute;
+  position: relative;
 }
 
 .w-mainCircle {
-  left: 40rem;
+  left: 0;
   position: relative;
   width: 18rem;
   height: 18rem;
@@ -20,6 +22,7 @@ right side */
   box-shadow: var(--smboxShadow);
   top: 2rem;
   background: white;
+  margin: auto;
 }
 
 .w-mainCircle > * {
@@ -79,13 +82,13 @@ right side */
 
 .blueCircle{
   background: blue;
-  left: 50rem;
+  left: 9rem;
   top: 0rem;
 }
 
 .yellowCircle{
   background: yellow;
-  left: 50rem;
+  left: 9rem;
   top: 8rem;
 }
 

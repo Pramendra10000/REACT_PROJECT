@@ -152,3 +152,43 @@ yarn add react-scroll
 <-- =================================== Adding multiple pages for study now 28-05-2026 ================================================ -->
 
 
+&&&& ==================== Android App from react Temparary like google bookmarked installed of our git live application ================================== &&&&
+
+For application making and deploying it on the git hub process is below 
+
+Step 1:- Commit All the chnages and push code as below.
+
+git add .
+
+git commit -m "Commit massage"
+
+gut push origin Pramendra-Portfolio
+
+Step 2:- Redeploy so that it will properly push react code in the github so that if you live your page on github it will works .
+
+npm run deploy
+
+Step 3 :- To make it live in application refer Manifest.json according your apploication you need to make that name and all.
+
+and make it link on head tag of your first page index.html
+
+If you required Application logo then need to go to below site .
+
+https://realfavicongenerator.net/  
+
+and upload your photo and click next and download zip file and rename 3 images where very small icon name as favicon.ico / and where 192 make it logo192.png  where 512 make same logo512.png.
+
+thats it and do same process .
+
+git add .
+git commit -m "Commit massage"
+gut push origin Pramendra-Portfolio
+npm run deploy
+
+After that open mobile chrome and click on three dots  and click "add home screen". ✅
+
+&&&& ==================== Android App from react Temparary like google bookmarked installed of our git live application ================================== &&&&
+
+
+
+

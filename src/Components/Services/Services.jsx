@@ -42,7 +42,7 @@ const Services = () => {
           whileInView={{ left: "12rem" }}
           initial={{ left: "25rem" }}
           transition={transition}
-          style={{ left: "12rem" }}>
+         className="card-1">
             <Card
               emoji={HeartEmoji}
               heading={"Design"}
@@ -52,7 +52,7 @@ const Services = () => {
 
           {/* Second cards */}
 
-          <div style={{ top: "12rem", left: "-4rem" }}>
+          <div className="card-2" >
             <Card
               emoji={glasses}
               heading={"Developer"}
@@ -61,7 +61,7 @@ const Services = () => {
           </div>
 
           {/* Third cards */}
-          <div style={{ top: "19rem", left: "12rem" }}>
+          <div className="card-3" >
             <Card
               emoji={Humble}
               heading={"JAVA Full Stack"}

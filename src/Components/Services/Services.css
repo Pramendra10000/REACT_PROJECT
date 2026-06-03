@@ -57,23 +57,71 @@
 }
 
 
+.card-1{top:0rem;left: 12rem; position: absolute;}
+.card-2{top:12rem;left: -4rem; position: absolute;}
+.card-3{top:19rem;left: 12rem; position: absolute;}
+
 @media screen and (max-width: 480px) {
 .services{
     margin-top: 0;
     flex-direction: column;
-    gap: 5rem;
-    height: 66rem;
+    gap: 2rem;
+    height: auto;
     padding: 0;
 }
 .cards{
     display: flex;
     flex-direction: column;
-    gap: 17rem;
+    gap: 1rem;
 }
 .cards>*{
-    position: static;
+    position: static !important;
+}
+
+.card-1,.card-2,.card-3{
+    position: static !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+.services{
+    margin-top: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: auto;
+    padding: 0 1rem;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+}
+.cards>*{
+    position: static !important;
 }
 .s-blur1,.s-blur2{
     display: none;
 }
+
+.card-1,.card-2,.card-3{
+    position: static !important;
+    left: 0 !important;
+    top: 0 !important;
 }
+
+.cards > div[style]{
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+}
+
+
+
