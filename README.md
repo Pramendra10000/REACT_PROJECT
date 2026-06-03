@@ -182,7 +182,7 @@ thats it and do same process .
 
 git add .
 git commit -m "Commit massage"
-gut push origin Pramendra-Portfolio
+git push origin Pramendra-Portfolio
 npm run deploy
 
 After that open mobile chrome and click on three dots  and click "add home screen". ✅
