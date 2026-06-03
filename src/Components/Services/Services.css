@@ -89,6 +89,7 @@
     position: static !important;
     left: 0 !important;
     top: 0 !important;
+    transform: none !important;
 }
 
 .cards > div[style]{
@@ -99,9 +100,19 @@
 
 }
 
+@media screen and (max-width: 480px) {
 
+.services{
+    gap: 2rem;
+    padding: 0;
 
+}
+.cards{
+    gap: 1rem;
+}
+}
 
+/* 
 
 @media screen and (max-width: 480px) {
 .services{
@@ -128,4 +139,4 @@
 }
 
 
-}
+} */

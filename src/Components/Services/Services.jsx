@@ -10,9 +10,11 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 
 const Services = () => {
-   const transition = { duration: 2, type: "spring" };
+  const transition = { duration: 2, type: "spring" };
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+  const ismobile = window.innerWidth <= 768;
   return (
     <div>
       <div className="services" id="Services">
@@ -39,10 +41,10 @@ const Services = () => {
         <div className="cards">
           {/* First cards */}
           <motion.div
-          whileInView={{ left: "12rem" }}
-          initial={{ left: "25rem" }}
-          transition={transition}
-         className="card-1">
+            whileInView={ismobile ? {} : { left: "12rem" }}
+            initial={ismobile ? {} : { left: "25rem" }}
+            transition={transition}
+            className="card-1">
             <Card
               emoji={HeartEmoji}
               heading={"Design"}
