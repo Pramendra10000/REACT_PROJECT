@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import Toggle from "../Toggle/Toggle";
-
 import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
       <div className="n-wrapper">
@@ -15,19 +16,12 @@ const Navbar = () => {
         <div className="n-right">
           <div className="n-list">
             <ul style={{ listStyleType: "none" }}>
-              <Link
-                spy={true}
-                to="Navbar"
-                smooth={true}
-                activeClass="activeClass"
-              >
-                <li  id="navlink">Home</li>
+              <Link spy={true} to="Navbar" smooth={true} activeClass="activeClass">
+                <li id="navlink">Home</li>
               </Link>
-
               <Link spy={true} to="Services" smooth={true}>
                 <li id="navlink">Services</li>
               </Link>
-
               <Link spy={true} to="Experience" smooth={true}>
                 <li id="navlink">Experience</li>
               </Link>
@@ -43,6 +37,26 @@ const Navbar = () => {
             <button className="button n-button">Contact</button>
           </Link>
         </div>
+
+        {/* Hamburger icon */}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <span onClick={() => setMenuOpen(false)}>✕</span>
+        <Link spy={true} to="Navbar" smooth={true} onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link spy={true} to="Services" smooth={true} onClick={() => setMenuOpen(false)}>Services</Link>
+        <Link spy={true} to="Experience" smooth={true} onClick={() => setMenuOpen(false)}>Experience</Link>
+        <Link spy={true} to="Portfolio" smooth={true} onClick={() => setMenuOpen(false)}>Portfolio</Link>
+        <Link spy={true} to="Testimonials" smooth={true} onClick={() => setMenuOpen(false)}>Testimonials</Link>
+        <Link spy={true} to="contact" smooth={true} onClick={() => setMenuOpen(false)}>
+          <button className="button">Contact</button>
+        </Link>
       </div>
     </div>
   );

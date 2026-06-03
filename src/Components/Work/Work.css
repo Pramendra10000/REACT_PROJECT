@@ -93,6 +93,30 @@ right side */
 }
 
 
+
+@media screen and (max-width: 800px) {
+.works{
+  flex-direction: column;
+  height: auto;
+  padding: 0 1rem;
+}
+.w-right {
+  position: relative;
+  left: 0;
+}
+
+
+.w-mainCircle{
+  left: 0;
+  margin: auto;
+}
+
+.blueCircle,.yellowCircle{
+  left: 9rem;
+}
+}
+
+
 @media screen and (max-width: 480px) {
 .works{
   flex-direction: column;
