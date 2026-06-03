@@ -1,8 +1,9 @@
 .contact-form {
-  padding: 0 3rem 0 3rem;
+  padding: 0 3rem ;
   display: flex;
   height: 80vh;
-  margin-top: 4rem;
+  margin-top: 5rem;
+  gap: 3rem;
 }
 
 .c-right {
@@ -15,22 +16,31 @@
 .c-right > form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
+  width: 100%;
 }
 
 .c-right .user {
   width: 20rem;
-  height: 2rem;
-  padding: 0.3rem;
+  max-width: 100%;
+  height: 2.8rem;
+  padding: 0.5rem 1rem;
   outline: none;
   border: 2px solid var(--orange);
   border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
-textarea {
-  height: 4rem !important;
+textarea.user {
+  max-height: 120px;
+  resize: vertical;
+}
+
+
+.c-right .button{
+  width: 180px;
 }
 
 .c-blur1 {
@@ -38,11 +48,60 @@ textarea {
   left: 8rem;
 }
 
+/* =====================================================
+Mobile (786)
+ =====================================================*/
+
+@media screen and (max-width: 786px) {
+.contact-form {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  padding: 1rem 2rem;
+  gap: 2rem;
+}
+.w-left,.c-right{
+  width: 100%;
+}
+}
+
+.c-right .user{
+  width: 100%;
+  max-width: 500px;
+}
+
+.c-blur1{
+  display: none;
+}
+
+/* =====================================================
+Mobile (480)
+ =====================================================*/
 
 @media screen and (max-width: 480px) {
 .contact-form {
-padding: 0;
-flex-direction: column;
+padding: 1rem;
+margin-top: 2rem;
+gap: 1.5rem;
+}
 
+.awesome span:first-child{
+  font-size: 1.8rem;
+}
+.awesome span:nth-child(2){
+  font-size: 1.5rem;
+}
+
+.c-right .user{
+  width: 100%;
+  font-size: 14px;
+}
+.c-right .button{
+  width: 100%;
+}
+
+textarea.user{
+  min-width: 100px;
 }
 }

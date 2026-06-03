@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import Wave from "../../img/wave.png";
 import Insta from "@iconscout/react-unicons/icons/uil-instagram";
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin";
@@ -8,7 +7,6 @@ import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin";
 const Footer = () => {
   return (
     <div className="footer">
-      <img src={Wave} alt="footer-wave" className="footer-wave" />
 
       <div className="footer-container">
         {/* About Section */}
