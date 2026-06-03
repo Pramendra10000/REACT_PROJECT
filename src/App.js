@@ -1,3 +1,5 @@
+// src/App.js
+
 import Navbar from "./Components/Navbar/Navbar";
 import Intro from "./Components/Intro/Intro";
 import "./App.css";
@@ -12,29 +14,33 @@ import { themeContext } from "./Context";
 import { useContext, useEffect } from "react";
 import StudyTime from "./Components/StudyTime/StudyTime";
 
-// Firebase imports
+// ✅ Firebase imports
 import { getAuth, signInAnonymously } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
-import { app } from "./firebase"; // <-- your firebase.js file
+import { app } from "./firebase"; // <-- make sure firebase.js is configured
 
 function App() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
   useEffect(() => {
-    // ✅ Test Firebase Authentication
+    // ✅ Firebase Authentication test
     const auth = getAuth(app);
     signInAnonymously(auth)
       .then(() => console.log("Firebase Auth connected successfully!"))
       .catch((err) => console.error("Auth error:", err));
 
-    // ✅ Test Firestore
+    // ✅ Firestore test
     const db = getFirestore(app);
     async function testFirestore() {
-      const testRef = doc(db, "testCollection", "testDoc");
-      await setDoc(testRef, { connected: true, timestamp: Date.now() });
-      const snapshot = await getDoc(testRef);
-      console.log("Firestore test data:", snapshot.data());
+      try {
+        const testRef = doc(db, "testCollection", "testDoc");
+        await setDoc(testRef, { connected: true, timestamp: Date.now() });
+        const snapshot = await getDoc(testRef);
+        console.log("Firestore test data:", snapshot.data());
+      } catch (error) {
+        console.error("Firestore error:", error);
+      }
     }
     testFirestore();
   }, []);
@@ -60,7 +66,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;
