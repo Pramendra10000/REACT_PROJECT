@@ -19,6 +19,9 @@ const StudyTime = () => {
            <Link to="/java">
              <button className="lang-btn">☕ Java</button>
            </Link>
+           <Link to="/spring">
+             <button className="lang-btn">🥬 Spring Framework</button>
+           </Link>
            <button className="lang-btn">🌐 HTML</button>
            <button className="lang-btn">🎨 CSS</button>
            <button className="lang-btn">⚡ JavaScript</button>
