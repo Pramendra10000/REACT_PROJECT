@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/REACT_PROJECT/static/css/main.5f71472c.css",
-    "main.js": "/REACT_PROJECT/static/js/main.23f3d533.js",
+    "main.css": "/REACT_PROJECT/static/css/main.9f7f6fcf.css",
+    "main.js": "/REACT_PROJECT/static/js/main.98cd1e67.js",
     "static/media/ecommerce.png": "/REACT_PROJECT/static/media/ecommerce.522da76635d52117102b.png",
     "static/media/sidebar.png": "/REACT_PROJECT/static/media/sidebar.b2225070b8adae68d063.png",
     "static/media/musicapp.png": "/REACT_PROJECT/static/media/musicapp.f1c301f91904ef5f9249.png",
@@ -16,11 +16,11 @@
     "static/media/Vector2.png": "/REACT_PROJECT/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "static/media/glasses.png": "/REACT_PROJECT/static/media/glasses.71d7c1b0ff0b870a9d7d.png",
     "index.html": "/REACT_PROJECT/index.html",
-    "main.5f71472c.css.map": "/REACT_PROJECT/static/css/main.5f71472c.css.map",
-    "main.23f3d533.js.map": "/REACT_PROJECT/static/js/main.23f3d533.js.map"
+    "main.9f7f6fcf.css.map": "/REACT_PROJECT/static/css/main.9f7f6fcf.css.map",
+    "main.98cd1e67.js.map": "/REACT_PROJECT/static/js/main.98cd1e67.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f71472c.css",
-    "static/js/main.23f3d533.js"
+    "static/css/main.9f7f6fcf.css",
+    "static/js/main.98cd1e67.js"
   ]
 }
