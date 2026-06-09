@@ -17,7 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./AddQuestionAns.css"; // ✅ import CSS
 
 // Import all datasets
-import { data } from "../StudyTime/qaData";           // Java
+import { data } from "../StudyTime/Question_ans/qaData";           // Java
 import { springdata } from "../StudyTime/Question_ans/springqaData";
 import { reactdata } from "../StudyTime/Question_ans/reactqaData";
 import { angulardata } from "../StudyTime/Question_ans/angularqaData";
