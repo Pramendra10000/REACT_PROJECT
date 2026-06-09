@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "./Context";
 import App from "./App";
 import JavaCoding from "./Components/StudyTime/javacoding";
-import AddQuestionAns from "./Components/StudyTime/AddQuestionAns"; // ✅ import
+import AddQuestionAns from "./Components/StudyTime/AddQuestionAns";
 import SpringFramework from "./Components/StudyTime/SpringFramework";
 
 ReactDOM.render(
@@ -14,11 +14,13 @@ ReactDOM.render(
         {/* Normal portfolio page */}
         <Route exact path="/" component={App} />
 
-        {/* Java study page */}
+        {/* Study pages */}
         <Route path="/java" component={JavaCoding} />
-    <Route path="/spring" component={SpringFramework} />
-        {/* ✅ New route for AddQuestionAns */}
-        <Route path="/add_question_ans" component={AddQuestionAns} />
+        <Route path="/spring" component={SpringFramework} />
+
+        {/* Add Q&A for each subject */}
+        <Route path="/add/:mode_question_ans" component={AddQuestionAns} />
+        
       </Switch>
     </Router>
   </ThemeProvider>,

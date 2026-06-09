@@ -109,7 +109,7 @@ const SpringFramework = () => {
             } else {
                 toast.success("Login successful!");
                 setShowModal(false);
-                history.push("/spring_add_question_ans");
+                history.push("/add/spring_question_ans");
             }
         } catch (err) {
             console.error(err);

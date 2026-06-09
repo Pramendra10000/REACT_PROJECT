@@ -118,7 +118,7 @@ const JavaCoding = () => {
                 toast.success("Login successful!");
                 resetForm();
                 setShowModal(false);
-                history.push("/add_question_ans");
+                history.push("/add/java_question_ans");
             }
         } catch (err) {
             console.error(err);
