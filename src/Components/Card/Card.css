@@ -15,9 +15,12 @@ padding: 0px 26px 2rem 26px;
 }
 
 .card span:nth-of-type(2){
-    color: var(--gray);
-    font-size: 16px;
+ font-weight: 300;
+    font-size: 15px;
+    color: var(--grey);
 }
+
+
 
 .card img{
     transform: scale(0.6);
@@ -25,7 +28,7 @@ padding: 0px 26px 2rem 26px;
 }
 
 
-.c-button{
+/* .c-button{
     background: #FFFFFF;
     box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
     border-radius: 7px;
@@ -33,7 +36,7 @@ padding: 0px 26px 2rem 26px;
     padding: 0px;
     font-size: 16px;
     color: #5290FD;
-}
+} */
 
 
 @media screen and (max-width: 480px) {
@@ -43,3 +46,12 @@ padding: 0px 26px 2rem 26px;
 }
 }
 
+.c-button{
+    background: #FFFFFF;
+    box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
+    border-radius: 7px;
+    border: 1px solid var(--orange);
+    padding: 5px;
+    font-size: 16px;
+    color: #5290FD;
+}

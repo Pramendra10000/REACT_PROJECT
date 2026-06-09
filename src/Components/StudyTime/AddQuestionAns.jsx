@@ -146,7 +146,8 @@ const AddQuestionAns = () => {
   };
 
   return (
-    <div className="addqa-page">
+  <div className={`${mode}-page addqa-page`}>
+
       <header>
         <div className="header-top">
           <div className="logo">Add <span>{mode} Q&A</span> 📘</div>

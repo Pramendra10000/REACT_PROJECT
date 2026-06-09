@@ -29,16 +29,16 @@
 
 /* Ribbon */
 .studytime-ribbon {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   padding: 1.5rem 2rem;
-   background: linear-gradient(135deg, #fff8ec, #fff3d6);
-   border: 3px solid var(--orange);
-   border-radius: 20px;
-   box-shadow: 0 8px 32px rgba(252, 166, 31, 0.25);
-   gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #fff8ec00, #fff3d600);
+    border: 3px solid var(--orange);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgb(252 166 31 / 43%);
+    gap: 1rem;
 }
 
 /* Left */

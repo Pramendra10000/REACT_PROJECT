@@ -5,7 +5,9 @@ import { ThemeProvider } from "./Context";
 import App from "./App";
 import JavaCoding from "./Components/StudyTime/javacoding";
 import AddQuestionAns from "./Components/StudyTime/AddQuestionAns";
+import react from "./Components/StudyTime/React";
 import SpringFramework from "./Components/StudyTime/SpringFramework";
+import angular from "./Components/StudyTime/Angular";
 
 ReactDOM.render(
   <ThemeProvider>
@@ -17,9 +19,12 @@ ReactDOM.render(
         {/* Study pages */}
         <Route path="/java" component={JavaCoding} />
         <Route path="/spring" component={SpringFramework} />
+         <Route path="/react" component={react} />
+         <Route path="/angular" component={angular} />
+         <Route path="/sql" component={angular} />
 
         {/* Add Q&A for each subject */}
-        <Route path="/add/:mode_question_ans" component={AddQuestionAns} />
+        <Route path="/add/:mode" component={AddQuestionAns} />
         
       </Switch>
     </Router>

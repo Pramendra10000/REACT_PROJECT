@@ -2,7 +2,16 @@
 
 import React from "react";
 import "./Portfolio.css";
-import { Swiper, SwiperSlide } from "swiper/react"; import { Autoplay, Pagination, Navigation } from "swiper/modules"; import Slider from "../../img/sidebar.png"; import Ecommerce from "../../img/ecommerce.png"; import HOC from "../../img/hoc.png"; import MusicApp from "../../img/musicapp.png"; import "swiper/css"; import "swiper/css/pagination"; import "swiper/css/navigation"; import { themeContext } from "../../Context"; import { useContext } from "react";
+import { Swiper, SwiperSlide } from "swiper/react"; import { Autoplay, Pagination, Navigation } from "swiper/modules"; 
+import Slider from "../../img/sidebar.png";
+ import Ecommerce from "../../img/ecommerce.png";
+  import HOC from "../../img/hoc.png";
+   import MusicApp from "../../img/musicapp.png"; 
+   import "swiper/css"; import "swiper/css/pagination";
+    import "swiper/css/navigation"; 
+    import { themeContext } from "../../Context"; 
+    import { useContext } from "react";
+    
 
 const Portfolio = () => {
    const theme = useContext(themeContext);

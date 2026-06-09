@@ -1,10 +1,11 @@
 .contact-form {
   padding: 0 3rem ;
   display: flex;
-  height: 80vh;
+  height: 40vh;
   margin-top: 5rem;
   gap: 3rem;
 }
+
 
 .c-right {
   display: flex;
@@ -70,6 +71,8 @@ Mobile (786)
   width: 100%;
   max-width: 500px;
 }
+
+
 
 .c-blur1{
   display: none;

@@ -24,11 +24,14 @@
     font-weight: bold;      
 }
 
-.awesome > :nth-child(3){
-    color: var(--gray);
+.awesome > :nth-child(3) {
+    font-weight: 400;
     font-size: 14px;
-    font-weight: bold;      
+    color: var(--grey);
+    margin-top: 5px;
 }
+
+
 
 .s-button{
     width: 8rem;

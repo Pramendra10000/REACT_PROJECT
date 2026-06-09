@@ -21,21 +21,17 @@ const Work = () => {
           Work for All these
         </span>
         <span>Brand & Clients</span>
-        <span>
+        <span style={{ color: darkMode ? "white" : "" }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod odit
           minima quisquam in voluptas hic, fuga nulla eaque beatae sapiente.
           <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
           labore.
           <br />
-          <span>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
             aspernatur porro. Similique!
-          </span>
-          <br />
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+          <br />Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </span>
-
         <button className="button s-button">Hire Me</button>
 
         <div className="blur s-blurl" style={{ background: "#ABF1FF94" }}></div>

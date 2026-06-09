@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect, useRef } from "react";
- import { useHistory } from "react-router-dom"; 
- import "./StudyPage.css";
+import { useHistory } from "react-router-dom";
+import "./React.css";
 
 // Firebase imports
 import {
@@ -16,18 +15,16 @@ import {
 } from "firebase/firestore";
 import { app } from "../../firebase";
 import { toast, ToastContainer } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const db = getFirestore(app);
 
-const JavaCoding = () => {
+const ReactPage = () => {
     const [activeTab, setActiveTab] = useState("All");
     const [searchQuery, setSearchQuery] = useState("");
     const [showModal, setShowModal] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
     const [questions, setQuestions] = useState([]);
-
-    // ✅ Track which card is open (by unique key string)
     const [openCardKey, setOpenCardKey] = useState(null);
 
     const [formData, setFormData] = useState({
@@ -56,46 +53,40 @@ const JavaCoding = () => {
 
     const history = useHistory();
 
-    // ✅ Load questions from Firestore (real-time)
+    // Load questions from Firestore
     useEffect(() => {
-        const unsub = onSnapshot(collection(db, "QuestionAnsMaster"),
-            (snap) => {
-                const list = snap.docs.map((doc) => doc.data());
-                setQuestions(list);
-            });
+        const unsub = onSnapshot(collection(db, "ReactQAMaster"), (snap) => {
+            const list = snap.docs.map((doc) => doc.data());
+            setQuestions(list);
+        });
         return () => unsub();
     }, []);
 
-    // ✅ Filter logic
     const filteredQuestions = questions.filter((q) => {
         const matchTab = activeTab === "All" || q.topic === activeTab;
-        const matchQuery =
-            q.question.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchQuery = q.question.toLowerCase().includes(searchQuery.toLowerCase());
         return matchTab && matchQuery;
     });
 
     const topics = ["All", ...new Set(questions.map((q) => q.topic))];
 
-    // ✅ Signup logic
+    // Signup
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
             const checks = [
-                query(collection(db, "UserDetails"), where("username", "==", formData.username)),
-                query(collection(db, "UserDetails"), where("email", "==", formData.email)),
-                query(collection(db, "UserDetails"), where("mobile", "==", formData.mobile)),
-                query(collection(db, "UserDetails"), where("linkedin", "==", formData.linkedin))
+                query(collection(db, "ReactUsers"), where("username", "==", formData.username)),
+                query(collection(db, "ReactUsers"), where("email", "==", formData.email)),
+                query(collection(db, "ReactUsers"), where("mobile", "==", formData.mobile)),
+                query(collection(db, "ReactUsers"), where("linkedin", "==", formData.linkedin))
             ];
-
             const results = await Promise.all(checks.map((q) => getDocs(q)));
             if (results.some((snap) => !snap.empty)) {
                 toast.error("User details already present!");
                 return;
             }
-
-            await setDoc(doc(collection(db, "UserDetails")), formData);
+            await setDoc(doc(collection(db, "ReactUsers")), formData);
             toast.success("Signup successful!");
-            resetForm();
             setShowModal(false);
         } catch (err) {
             console.error(err);
@@ -103,23 +94,22 @@ const JavaCoding = () => {
         }
     };
 
-    // ✅ Login logic
+    // Login
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
             const q = query(
-                collection(db, "UserDetails"),
+                collection(db, "ReactUsers"),
                 where("username", "==", formData.username),
                 where("password", "==", formData.password)
             );
             const snap = await getDocs(q);
             if (snap.empty) {
-                toast.error("User details not found, please sign up!");
+                toast.error("User not found, please sign up!");
             } else {
                 toast.success("Login successful!");
-                resetForm();
                 setShowModal(false);
-                history.push("/add/java");
+                history.push("/add/react");
             }
         } catch (err) {
             console.error(err);
@@ -128,23 +118,21 @@ const JavaCoding = () => {
     };
 
     return (
-        <div className="java-page">
+        <div className="spring-page">
             <header>
                 <div className="header-top">
                     <div className="logo">
-                        Java<span>Prep</span> 🔥
+                        React<span>js</span> 🌱
                     </div>
                     <div className="stats">
                         <button className="tab" onClick={() => setShowModal(true)}>
-                            ADD JAVA QUESTIONS
+                            ADD REACT QUESTIONS
                         </button>
                         <span>
-                            Total: <strong>{questions.length}</strong>
-                            Q&amp;As
+                            Total: <strong>{questions.length}</strong> Q&As
                         </span>
                         <span>
-                            Shown:
-                            <strong>{filteredQuestions.length}</strong>
+                            Shown: <strong>{filteredQuestions.length}</strong>
                         </span>
                         <button className="tab" onClick={() => history.push("/")}>
                             Back
@@ -152,11 +140,11 @@ const JavaCoding = () => {
                     </div>
                 </div>
 
-                {/* search bar + tabs */}
+                {/* Search bar + tabs */}
                 <div className="search-bar">
                     <input
                         type="text"
-                        placeholder="Search questions..."
+                        placeholder="Search React questions..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
@@ -164,8 +152,7 @@ const JavaCoding = () => {
                         {topics.map((cat) => (
                             <button
                                 key={cat}
-                                className={`tab ${activeTab === cat ?
-                                    "active" : ""}`}
+                                className={`tab ${activeTab === cat ? "active" : ""}`}
                                 onClick={() => setActiveTab(cat)}
                             >
                                 {cat}
@@ -179,8 +166,7 @@ const JavaCoding = () => {
                         className="progress-bar"
                         style={{
                             width: questions.length
-                                ? `${(filteredQuestions.length /
-                                    questions.length) * 100}%`
+                                ? `${(filteredQuestions.length / questions.length) * 100}%`
                                 : "0%"
                         }}
                     ></div>
@@ -193,10 +179,8 @@ const JavaCoding = () => {
                     if (visibleQs.length === 0) return null;
                     return (
                         <div key={section} className="section">
-                            <div
-                                className="section-title">{section}</div>
+                            <div className="section-title">{section}</div>
                             {visibleQs.map((item, idx) => {
-                                // ✅ Unique key per card: section + index
                                 const cardKey = `${section}-${idx}`;
                                 return (
                                     <QACard
@@ -215,7 +199,7 @@ const JavaCoding = () => {
                 })}
             </main>
 
-            {/* ✅ Modal */}
+            {/* Modal */}
             {showModal && (
                 <div className="modal-overlay">
                     <div className="modal">
@@ -372,68 +356,40 @@ const JavaCoding = () => {
                 </div>
             )}
 
-            {/* Toast container */}
             <ToastContainer position="top-right" autoClose={3000} />
         </div>
     );
 };
 
-
-// ✅ Updated QACard — accordion + 10s auto-close + responsive answer scroll 
+// QACard same as before
 const QACard = ({ cardKey, q, a, isOpen, onOpen, onClose }) => {
     const timerRef = useRef(null);
-
-    // When this card becomes open, start 10s auto-close timer
     useEffect(() => {
         if (isOpen) {
-            // Clear any existing timer
             if (timerRef.current) clearTimeout(timerRef.current);
-            // Set 10 second auto-close
-            timerRef.current = setTimeout(() => {
-                onClose();
-            }, 10000);
+            timerRef.current = setTimeout(() => onClose(), 10000);
         } else {
-            // Card closed — clear timer
-            if (timerRef.current) {
-                clearTimeout(timerRef.current);
-                timerRef.current = null;
-            }
+            if (timerRef.current) clearTimeout(timerRef.current);
         }
-
-        // Cleanup on unmount
         return () => {
             if (timerRef.current) clearTimeout(timerRef.current);
         };
     }, [isOpen, onClose]);
 
-    const handleClick = () => {
-        if (isOpen) {
-            // Clicking open card closes it
-            onClose();
-        } else {
-            // Open this card (parent will close the previous one)
-            onOpen();
-        }
-    };
-
     return (
         <div className={`qa-card ${isOpen ? "open" : ""}`}>
-            <div className="qa-question" onClick={handleClick}>
+            <div className="qa-question" onClick={isOpen ? onClose : onOpen}>
                 <span className="q-num">Q</span>
                 <span className="q-text">{q}</span>
                 <span className={`q-arrow ${isOpen ? "rotate" : ""}`}>▾</span>
             </div>
             {isOpen && (
                 <div className="qa-answer">
-                    {/* ✅ Scroll wrapper for small screens */}
-                    <div
-                        className="qa-answer-scroll"
-                        dangerouslySetInnerHTML={{ __html: a }}
-                    />
+                    <div className="qa-answer-scroll" dangerouslySetInnerHTML={{ __html: a }} />
                 </div>
             )}
         </div>
     );
 };
 
-export default JavaCoding;
+export default ReactPage;

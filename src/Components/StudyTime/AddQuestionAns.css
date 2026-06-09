@@ -1,4 +1,50 @@
-/* Wrapper follows same theme as java-page */
+/* ==================== Global base ==================== */
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --card: #16161f;
+  --border: #2a2a3a;
+  --muted: #7070a0;
+  --tag-bg: #1e1e30;
+}
+
+/* ==================== Subject themes ==================== */
+.java-page {
+  --accent: #f0c040;   /* gold */
+  --accent2: #40c8f0;  /* sky blue */
+  --green: #4af0a0;
+  --text: #e8e8f0;
+}
+
+.spring-page {
+  --accent: #6db33f;   /* Spring green */
+  --accent2: #3fa34d;  /* lighter green */
+  --green: #8bc34a;
+  --text: #eafbea;
+}
+
+.react-page {
+  --accent: #61dafb;   /* React blue */
+  --accent2: #1e90ff;  /* deeper blue */
+  --green: #00c4b3;
+  --text: #e8f6ff;
+}
+
+.angular-page {
+  --accent: #dd0031;   /* Angular red */
+  --accent2: #ff5722;  /* orange */
+  --green: #4caf50;
+  --text: #ffe8e8;
+}
+
+.sql-page {
+  --accent: #336791;   /* SQL navy */
+  --accent2: #1f4e79;  /* darker blue */
+  --green: #4caf50;
+  --text: #e8f0ff;
+}
+
+/* ==================== Add Q&A wrapper ==================== */
 .addqa-page {
   background: var(--bg);
   color: var(--text);
@@ -7,7 +53,7 @@
   padding: 20px;
 }
 
-/* Header same as java-page */
+/* Header */
 .addqa-page header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -25,9 +71,10 @@
 }
 
 .addqa-page .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.5px;
+  color: var(--text);
 }
 .addqa-page .logo span { color: var(--accent); }
 
@@ -40,20 +87,17 @@
 }
 .addqa-page .stats .btn { font-size: 12px; }
 
-/* Q&A entry cards */
+/* ==================== Entry cards ==================== */
 .addqa-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 10px;
-  /* extra top padding so inputs don’t overlap with close button */
   padding: 45px 15px 15px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin: 15px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   position: relative;
 }
 
-/* Inputs styled to match theme */
 .addqa-card input,
 .addqa-card textarea {
   width: 98%;
@@ -80,7 +124,30 @@
   resize: vertical;
 }
 
-/* Buttons aligned */
+/* Close button */
+.addqa-card .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.addqa-card .close-btn:hover {
+  color: var(--accent);
+  background: var(--card);
+}
+
+/* ==================== Buttons ==================== */
 .addqa-actions {
   display: flex;
   gap: 10px;
@@ -92,7 +159,6 @@
   text-align: center;
 }
 
-/* Buttons */
 .addqa-page .btn {
   display: inline-block;
   padding: 10px 18px;
@@ -119,43 +185,18 @@
   border-color: var(--accent);
   color: #000;
 }
+.addqa-page .btn-primary:hover { filter: brightness(1.1); }
 
-.addqa-page .btn-primary:hover {
-  background: #ffd966;
-  border-color: #ffd966;
+.addqa-page .btn-warning {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #000;
 }
+.addqa-page .btn-warning:hover { filter: brightness(1.1); }
 
 .addqa-page .btn-danger {
   background: #f44336;
   border-color: #f44336;
   color: #fff;
 }
-
-.addqa-page .btn-danger:hover {
-  background: #e53935;
-}
-
-/* Close button inside entry card */
-.addqa-card .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  font-size: 14px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted, #aaa);
-  cursor: pointer;
-  transition: color 0.2s, background 0.2s;
-}
-
-.addqa-card .close-btn:hover {
-  color: var(--accent, #f0c040);
-  background: var(--card);
-}
+.addqa-page .btn-danger:hover { background: #e53935; }

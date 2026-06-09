@@ -181,7 +181,7 @@ and upload your photo and click next and download zip file and rename 3 images w
 thats it and do same process .
 
 git add .
-git commit -m "Dynamic login details."
+git commit -m "Fixex for dark mode"
 git push origin Pramendra-Portfolio
 npm run deploy
 
