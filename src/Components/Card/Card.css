@@ -43,7 +43,9 @@ padding: 0px 26px 2rem 26px;
 .card{
     width: auto;
     position:  relative !important;
+     height: 16rem;
 }
+
 }
 
 .c-button{

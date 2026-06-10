@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
-import "./React.css";
+
+import "./StudyPage.css";
 
 // Firebase imports
 import {

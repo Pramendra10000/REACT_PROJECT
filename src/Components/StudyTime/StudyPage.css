@@ -520,9 +520,203 @@ line-height: 1.8; }
    .stats           { flex-wrap: wrap; gap: 8px; }
 }
 
+
 /* ============================================================
-   RESPONSIVE — Small phones (400px) ✅ FINAL FIX
-   ============================================================ */
+    RESPONSIVE — Small phones (400px) ✅ FINAL FIX
+    ============================================================ */
     @media (max-width: 400px) {
-    
+
+   /* ── Kill horizontal scroll globally ── */
+   *, *::before, *::after {
+     box-sizing: border-box;
+   }
+
+   .java-page,
+   .spring-page,
+   .react-page,
+   .sql-page,
+   .angular-page {
+     padding: 0;
+     overflow-x: hidden;
+     width: 100%;
+   }
+
+   /* ── Header ── */
+   .java-page header,
+   .spring-page header,
+   .react-page header,
+   .sql-page header,
+   .angular-page header {
+     padding: 12px 12px 10px;
+     width: 100%;
+   }
+
+   .header-top {
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 8px;
+     width: 100%;
+   }
+
+   .logo {
+     font-size: 16px;
+   }
+
+   /* ── Stats row: wrap buttons + counts ── */
+   .stats {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 6px;
+     width: 100%;
+     font-size: 11px;
+   }
+
+   .stats .tab {
+     flex: 1 1 auto;
+     min-width: 0;
+     font-size: 10px;
+     padding: 6px 8px;
+     text-align: center;
+     white-space: nowrap;
+   }
+
+   /* ── Search bar ── */
+   .search-bar {
+     flex-direction: column;
+     gap: 8px;
+     width: 100%;
+     margin-top: 10px;
+   }
+
+   .search-bar input {
+     width: 100%;
+     min-width: 0;
+     font-size: 12px;
+     padding: 8px 10px;
+   }
+
+   /* ── Tabs: wrap nicely ── */
+   .tabs {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 6px;
+     width: 100%;
+   }
+
+   .tab {
+     font-size: 10px;
+     padding: 5px 10px;
+     flex-shrink: 0;
+   }
+
+   /* ── Main content ── */
+   main {
+     padding: 16px 10px 40px;
+     width: 100%;
+     overflow-x: hidden;
+   }
+
+   /* ── QA Card ── */
+   .qa-card {
+     width: 100%;
+     overflow: hidden;
+   }
+
+   .qa-question {
+     padding: 12px 10px;
+     gap: 10px;
+   }
+
+   .q-num {
+     font-size: 10px;
+     padding: 2px 5px;
+   }
+
+   .q-text {
+     font-size: 12.5px;
+     word-break: break-word;
+   }
+
+   .q-arrow {
+     font-size: 14px;
+   }
+
+   /* ── Answer ── */
+   .qa-answer {
+     padding: 0 10px 14px 10px;
+   }
+
+   /* Scroll only answer content horizontally, not full page */
+   .qa-answer-scroll {
+     width: 100%;
+     overflow-x: auto;
+     overflow-y: visible;
+   }
+
+   .qa-answer p,
+   .qa-answer ul {
+     font-size: 12.5px;
+     line-height: 1.7;
+     word-break: break-word;
+   }
+
+   /* Code block: horizontal scroll within box only */
+   .qa-answer code {
+     font-size: 10.5px;
+     padding: 8px 10px;
+     white-space: pre;
+     overflow-x: auto;
+     display: block;
+     width: 100%;
+     max-width: 100%;
+     word-break: keep-all;
+   }
+
+   /* Table: scroll within wrapper only */
+   .qa-answer table {
+     min-width: 320px;
+     font-size: 11.5px;
+   }
+
+   .qa-answer th,
+   .qa-answer td {
+     padding: 6px 8px;
+     white-space: nowrap;
+   }
+
+   /* ── Modal ── */
+   .modal {
+     width: 92vw;
+     padding: 16px 14px;
+   }
+
+   .modal h2 {
+     font-size: 16px;
+   }
+
+   .modal-form input {
+     font-size: 12px;
+     padding: 7px 8px;
+   }
+
+   .modal-switch {
+     gap: 8px;
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+
+   .modal-switch .tab {
+     flex: 1 1 auto;
+     min-width: 80px;
+     text-align: center;
+   }
+
+   /* ── Section title ── */
+   .section-title {
+     font-size: 10px;
+     letter-spacing: 1.5px;
+     margin-top: 24px;
+   }
+
+ 
 }

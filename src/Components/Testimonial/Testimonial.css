@@ -78,14 +78,62 @@
 }
 
 
+@media screen and (max-width: 768px) {
+
+.footer {
+    background: #111;
+    color: white;
+    margin-top: 3rem;
+    padding: 4rem 2rem;
+    width: 100%;
+    margin-left: -7%;
+    margin-bottom: -12%;
+}
+}
+
+
+
+
 @media screen and (max-width: 480px) {
 
 .t-wrapper{
   padding: 0;
 }
 
+.testimonial{
+  height: 20rem;
+}
+
 .testimonial>img{
 width: 70px;
 height: 70px;
+}
+}
+
+
+
+@media screen and (max-width: 350px) {
+
+.t-wrapper{
+  padding: 0;
+}
+
+.testimonial{
+  height: 20rem;
+}
+
+.testimonial>img{
+width: 70px;
+height: 70px;
+}
+
+.footer {
+    background: #111;
+    color: white;
+    margin-top: 2rem;
+    padding: 4rem 2rem;
+    width: 400px;
+    margin-left: -11%;
+    margin-bottom: -15%;
 }
 }

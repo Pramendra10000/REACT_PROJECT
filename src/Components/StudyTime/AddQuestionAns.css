@@ -200,3 +200,21 @@
   color: #fff;
 }
 .addqa-page .btn-danger:hover { background: #e53935; }
+
+
+
+
+
+ @media (max-width: 500px) {
+.addqa-page .btn {
+  padding: 10px 8px;
+}
+
+ }
+
+ @media (max-width: 400px) {
+.addqa-page .btn {
+  padding: 10px 6px;
+}
+
+ }
