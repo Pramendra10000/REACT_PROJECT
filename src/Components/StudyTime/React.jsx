@@ -367,7 +367,7 @@ const QACard = ({ cardKey, q, a, isOpen, onOpen, onClose }) => {
     useEffect(() => {
         if (isOpen) {
             if (timerRef.current) clearTimeout(timerRef.current);
-            timerRef.current = setTimeout(() => onClose(), 10000);
+            timerRef.current = setTimeout(() => onClose(), 500000);
         } else {
             if (timerRef.current) clearTimeout(timerRef.current);
         }

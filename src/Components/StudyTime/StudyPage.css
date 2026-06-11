@@ -377,22 +377,6 @@ line-height: 1.8; }
    gap: 10px;
 }
 
-.qa-card .qa-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-}
-
-.qa-card.open .qa-answer {
-  max-height: 500px; /* adjust based on content */
-  opacity: 1;
-}
-
-.qa-card.closing .qa-answer {
-  max-height: 0;
-  opacity: 0;
-}
 
 
 .modal-form input {

@@ -18,10 +18,10 @@ import "./AddQuestionAns.css"; // ✅ import CSS
 
 // Import all datasets
 import { data } from "../StudyTime/Question_ans/qaData";           // Java
-import { springdata } from "../StudyTime/Question_ans/springqaData";
-import { reactdata } from "../StudyTime/Question_ans/reactqaData";
-import { angulardata } from "../StudyTime/Question_ans/angularqaData";
-import { sqldata } from "../StudyTime/Question_ans/sqlqaData";
+import { data as springdata } from "../StudyTime/Question_ans/springqaData";
+import { data as reactdata } from "../StudyTime/Question_ans/reactqaData";
+import { data as angulardata } from "../StudyTime/Question_ans/angularqaData";
+import { data as sqldata } from "../StudyTime/Question_ans/sqlqaData";
 
 const db = getFirestore(app);
 
