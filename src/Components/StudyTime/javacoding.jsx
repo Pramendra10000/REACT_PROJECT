@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
  import { useHistory } from "react-router-dom"; 
  import "./StudyPage.css";
 
@@ -27,8 +27,9 @@ const JavaCoding = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [questions, setQuestions] = useState([]);
 
-    // ✅ Track which card is open (by unique key string)
-    const [openCardKey, setOpenCardKey] = useState(null);
+    // ✅ Track which cards are open (array of keys)
+    const [openCards, setOpenCards] = useState([]);
+    const [closingCard, setClosingCard] = useState(null);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -127,6 +128,33 @@ const JavaCoding = () => {
         }
     };
 
+    // ✅ Card open/close logic
+    const handleOpen = (cardKey) => {
+    if (openCards.includes(cardKey)) return;
+
+    if (openCards.length < 1) {
+        // allow up to two cards open
+        setOpenCards([...openCards, cardKey]);
+    } else {
+        // already two open → close the oldest and keep the newest two
+        const [first, second] = openCards;
+        setClosingCard(first);
+        setTimeout(() => {
+            setOpenCards([second, cardKey]);
+            setClosingCard(null);
+        }, 300); // matches CSS transition
+    }
+};
+
+
+    const handleClose = (cardKey) => {
+        setClosingCard(cardKey);
+        setTimeout(() => {
+            setOpenCards((prev) => prev.filter((k) => k !== cardKey));
+            setClosingCard(null);
+        }, 300);
+    };
+
     return (
         <div className="java-page">
             <header>
@@ -196,7 +224,6 @@ const JavaCoding = () => {
                             <div
                                 className="section-title">{section}</div>
                             {visibleQs.map((item, idx) => {
-                                // ✅ Unique key per card: section + index
                                 const cardKey = `${section}-${idx}`;
                                 return (
                                     <QACard
@@ -204,9 +231,10 @@ const JavaCoding = () => {
                                         cardKey={cardKey}
                                         q={item.question}
                                         a={item.answer}
-                                        isOpen={openCardKey === cardKey}
-                                        onOpen={() => setOpenCardKey(cardKey)}
-                                        onClose={() => setOpenCardKey(null)}
+                                        isOpen={openCards.includes(cardKey)}
+                                        isClosing={closingCard === cardKey}
+                                        onOpen={() => handleOpen(cardKey)}
+                                        onClose={() => handleClose(cardKey)}
                                     />
                                 );
                             })}
@@ -378,54 +406,25 @@ const JavaCoding = () => {
     );
 };
 
-
-// ✅ Updated QACard — accordion + 10s auto-close + responsive answer scroll 
-const QACard = ({ cardKey, q, a, isOpen, onOpen, onClose }) => {
-    const timerRef = useRef(null);
-
-    // When this card becomes open, start 10s auto-close timer
-    useEffect(() => {
-        if (isOpen) {
-            // Clear any existing timer
-            if (timerRef.current) clearTimeout(timerRef.current);
-            // Set 10 second auto-close
-            timerRef.current = setTimeout(() => {
-                onClose();
-            }, 10000);
-        } else {
-            // Card closed — clear timer
-            if (timerRef.current) {
-                clearTimeout(timerRef.current);
-                timerRef.current = null;
-            }
-        }
-
-        // Cleanup on unmount
-        return () => {
-            if (timerRef.current) clearTimeout(timerRef.current);
-        };
-    }, [isOpen, onClose]);
-
+// ✅ Updated QACard — accordion + max two open + smooth close
+const QACard = ({ cardKey, q, a, isOpen, isClosing, onOpen, onClose }) => {
     const handleClick = () => {
         if (isOpen) {
-            // Clicking open card closes it
             onClose();
         } else {
-            // Open this card (parent will close the previous one)
             onOpen();
         }
     };
 
     return (
-        <div className={`qa-card ${isOpen ? "open" : ""}`}>
+        <div className={`qa-card ${isOpen ? "open" : ""} ${isClosing ? "closing" : ""}`}>
             <div className="qa-question" onClick={handleClick}>
                 <span className="q-num">Q</span>
                 <span className="q-text">{q}</span>
                 <span className={`q-arrow ${isOpen ? "rotate" : ""}`}>▾</span>
             </div>
-            {isOpen && (
+            {(isOpen || isClosing) && (
                 <div className="qa-answer">
-                    {/* ✅ Scroll wrapper for small screens */}
                     <div
                         className="qa-answer-scroll"
                         dangerouslySetInnerHTML={{ __html: a }}
